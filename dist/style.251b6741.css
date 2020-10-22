@@ -1,0 +1,39 @@
+.list-products {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    padding: 5px;
+    padding-left: 15px;
+    border-left: 4px solid orangered;
+    margin: 15px;
+}
+
+.card {
+    height: 100%;
+    padding: 2rem;
+}
+
+#list-products {
+    display: grid !important;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+@media only screen and (max-width: 1024px) {
+    #list-products {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only (max-width: 1224px) {
+    #list-products {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+/*# sourceMappingURL=/style.251b6741.css.map */

@@ -1,0 +1,23 @@
+{
+  "name": "vanilla-js-cards",
+  "version": "1.0.0",
+  "description": "cards",
+  "main": "app.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build":"parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlenJakob/vanilla-js-cards.git"
+  },
+  "author": "Alen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlenJakob/vanilla-js-cards/issues"
+  },
+  "homepage": "https://github.com/AlenJakob/vanilla-js-cards#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
