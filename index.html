@@ -13,13 +13,39 @@
 <body>
     <h1 class="title">Lets start</h1>
 
+    <section class="container">
+        <div class="is-warning">
+            <h2 class="title">Filter</h2>
+            <div class="level">
+                <div class="level-item level-left">
+                    <button class="button price-up"><i class="btn-filter fas fa-sort-amount-up"></i></button>
+                    <button class="button price-down  ml-3"><i class=" btn-filter fas fa-sort-amount-down"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
     <div class="section">
         <div id="list" class="container ">
             <ul id="list-products" class="columns ">
-                
+
             </ul>
         </div>
     </div>
+
+    <!-- Image_Modal  -->
+    <div id="modal-img" class="modal active">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <p class="image is-4by3">
+                <img class="modal-img" alt="">
+            </p>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- Image_Modal_Over -->
     <script src="./js/app.js" type="text/javascript"></script>
 </body>
 

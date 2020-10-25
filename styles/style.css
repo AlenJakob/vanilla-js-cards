@@ -1,3 +1,6 @@
+*{
+    transition:.3s;
+}
 .list-products {
     font-size: 20px;
     padding: 10px;
