@@ -1,9 +1,8 @@
-
 import { Product } from "../Product"
-import { imgUrl1, imgUrl2, imgUrl3 } from "../imgs";
-import { desc1, desc2 } from "../desc";
 
-import { productList } from "../../app"
+
+// import { productList } from "../../app";
+const productList = document.querySelector("#list-products");
 
 
 export class Bicycle extends Product {
@@ -12,13 +11,25 @@ export class Bicycle extends Product {
         this.desc = desc;
         this.imgUrl = imgUrl;
     }
-    filterPriceDown(store) {
-        console.log("Price Down")
-        return store.sort((a, b) => a.price - b.price)
+    messageBox(domEl, msg) {
+        domEl.innerHTML += msg;
     }
-    filterPriceUp(store) {
-        console.log("Price Up")
-        return store.sort((a, b) => b.price - a.price)
+    filterPriceDown(store, a, b) {
+        return store.filter(item => Number(a) <= item.price && item.price <= Number(b)).sort((a, b) => a.price - b.price)
+    }
+    filterPriceUp(store, a, b) {
+        return store.filter(item => Number(a) <= item.price && item.price <= Number(b)).sort((a, b) => b.price - a.price)
+    }
+    filterBetweenPrice(store, a, b, msgBox) {
+        const filteredStore = store.filter(item => Number(a) <= item.price && item.price <= Number(b))
+
+        if (filteredStore.length <= 0) {
+            console.log(filteredStore)
+            msgBox()
+            return store
+        } else {
+            return filteredStore
+        }
     }
     renderCardToDom(store) {
         for (let bicycle of store) {
@@ -27,7 +38,7 @@ export class Bicycle extends Product {
     <div class="column list-products is-one-quarter- is-mobile">
     <div class="card">
         <div class="card-image">
-            <figure class="image is-4by2">
+            <figure class="image is-4by3">
                 <img class="imgX" src=${bicycle.imgUrl} alt="Placeholder image">
             </figure>
         </div>
@@ -43,10 +54,14 @@ export class Bicycle extends Product {
                     <p class="subtitle is-6">${bicycle.model ? bicycle.model : "no model"} </p>
                 </div>
             </div>
-            <div class="content">${bicycle.desc}</div>
+            <div class="content">${bicycle.desc.substring(0, 60)}...
+           <div class="has-text-right mt-5 mb-5">
+          <a >read more</a>
+           </div>
+            </div>
             <div>
-            <b class="box has-text-danger">${bicycle.price ? bicycle.price + " €" : Link
-                }</b> <div class="mt-5">
+            <b class="box has-text-right has-text-danger">${bicycle.price ? bicycle.price + " €" : Link
+                }</b> <div class="mt-5 has-text-right">
               <button class="button is-danger">Add To Cart</button>
           </div>
             </div>
@@ -61,10 +76,7 @@ export class Bicycle extends Product {
     }
 }
 
-const newBicycle = new Bicycle({ name: "Kross", model: "Batavus", price: 1100, desc: desc1, imgUrl: imgUrl1 });
-const newBicycle2 = new Bicycle({ name: "Merida", model: "Mierda", price: 2300, desc: desc1, imgUrl: imgUrl2 });
-const newBicycle3 = new Bicycle({ name: "Romet", model: "m400", price: 3600, desc: desc1, imgUrl: imgUrl3 });
 
-export const store = [newBicycle, newBicycle2, newBicycle3];
+
 
 
