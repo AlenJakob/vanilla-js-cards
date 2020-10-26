@@ -38,7 +38,7 @@ export class Bicycle extends Product {
     <div class="column list-products is-one-quarter- is-mobile">
     <div class="card">
         <div class="card-image">
-            <figure class="image is-4by3">
+            <figure class="image is-4by2">
                 <img class="imgX" src=${bicycle.imgUrl} alt="Placeholder image">
             </figure>
         </div>

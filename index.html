@@ -18,22 +18,23 @@
     </div>
 
     <!-- FILTERS DOM -->
-    <section class="container">
+    <section class="container section">
         <div class="is-warning">
             <h2 class="title">Filters :</h2>
-            <div class="level">
-                <div class="level-item level-left">
-                    <button class="button price-up"><i class="btn-filter fas fa-sort-amount-up"></i></button>
-                    <button class="button price-down  ml-3"><i class=" btn-filter fas fa-sort-amount-down"></i></button>
-                    <form class="form level-item level-left ">
-                        <label class="ml-3 mr-3 subtitle" for="from">from </label>
-                        <input class="lowVal column is-1 input is-dark mr-3" value="0" min="0" type="number" name="from"
-                            placeholder="od">
+            <div class="level ">
+                <div class=" columns">
+                    <div class="column">
+                        <button class="button column is-6 price-up mb-3"><i
+                                class="btn-filter fas fa-sort-amount-up"></i></button>
+                        <button class="button column price-down  "><i
+                                class=" btn-filter fas fa-sort-amount-down"></i></button></div>
+                    <form class="form column is-6" style="display: flex;">
 
-                        <label class="mr-3 subtitle" for="from">to </label>
-                        <input class="highVal column is-1 input is-dark" value="99999" min="0" type="number" name="to"
-                            placeholder="do">
-                        <button class="button is-danger is-outlined ml-3"> submit</button>
+                        <input class="lowVal input is-dark mr-3" min="0" type="number" name="from" placeholder="od">
+
+
+                        <input class="highVal  input is-dark mr-3" min="0" type="number" name="to" placeholder="do">
+                        <button class="button is-danger is-outlined "> submit</button>
                     </form>
                 </div>
 
@@ -41,7 +42,7 @@
         </div>
     </section>
 
-
+    <!-- Render Products list -->
     <div class="section">
         <div id="list" class="container ">
             <ul id="list-products" class="columns ">

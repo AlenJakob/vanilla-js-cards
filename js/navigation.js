@@ -35,10 +35,7 @@ const nav = `
       <a class="navbar-item">
       Contact Us
     </a>
-      </div>
-    </div>
-
-    <div class="navbar-end">
+      </div><div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-danger">
@@ -49,6 +46,7 @@ const nav = `
           </a>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </nav>
