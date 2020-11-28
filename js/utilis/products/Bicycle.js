@@ -14,11 +14,24 @@ export class Bicycle extends Product {
     messageBox(domEl, msg) {
         domEl.innerHTML += msg;
     }
-    filterPriceDown(store, a, b) {
-        return store.filter(item => Number(a) <= item.price && item.price <= Number(b)).sort((a, b) => a.price - b.price)
+    filterPriceDown(store, a, b, msgBox) {
+        const filterFromLowestPrice = store.filter(item => Number(a) <= item.price && item.price <= Number(b)).sort((a, b) => a.price - b.price)
+        if (filterFromLowestPrice <= 0) {
+            msgBox();
+            return store;
+        } else {
+            return filterFromLowestPrice;
+        }
     }
-    filterPriceUp(store, a, b) {
-        return store.filter(item => Number(a) <= item.price && item.price <= Number(b)).sort((a, b) => b.price - a.price)
+    filterPriceUp(store, a, b, msgBox) {
+
+        const filterFromHighestPrice = store.filter(item => Number(a) <= item.price && item.price <= Number(b)).sort((a, b) => b.price - a.price);
+        if (filterFromHighestPrice <= 0) {
+            msgBox()
+            return store;
+        } else {
+            return filterFromHighestPrice;
+        }
     }
     filterBetweenPrice(store, a, b, msgBox) {
         const filteredStore = store.filter(item => Number(a) <= item.price && item.price <= Number(b))

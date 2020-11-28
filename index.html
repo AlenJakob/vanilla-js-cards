@@ -13,8 +13,8 @@
 <body>
     <div class="is-danger navigation container mb-6"></div>
     <!--  -->
-    <div class="container notification is-6 is-danger is-invisible">
-        The value is not available , Pleae check again
+    <div class="container notification is-4 is-danger is-invisible">
+        The value is not available , Please check again
     </div>
 
     <!-- FILTERS DOM -->
@@ -23,12 +23,13 @@
             <h2 class="title">Filters :</h2>
             <div class="level ">
                 <div class=" columns">
-                    <div class="column">
-                        <button class="button column is-6 price-up mb-3"><i
-                                class="btn-filter fas fa-sort-amount-up"></i></button>
-                        <button class="button column price-down  "><i
-                                class=" btn-filter fas fa-sort-amount-down"></i></button></div>
-                    <form class="form column is-6" style="display: flex;">
+                    <div class="column is-2 mr-2" style="display: flex;">
+                        <button class="button mr-3  price-up "><i class="btn-filter fas fa-sort-amount-up"></i></button>
+                        <button class="button  price-down  "><i
+                                class=" btn-filter fas fa-sort-amount-down"></i></button>
+                    </div>
+
+                    <form class="form column is-10" style="display: flex;">
 
                         <input class="lowVal input is-dark mr-3" min="0" type="number" name="from" placeholder="od">
 

@@ -36,12 +36,12 @@ Bicycle.prototype.renderCardToDom(store);
 
 priceDown.addEventListener("click", (e) => {
     cleanProductList(productList)
-    Bicycle.prototype.renderCardToDom(Bicycle.prototype.filterPriceDown(store, Number(lowestNum.value), Number(highestNum.value)));
+    Bicycle.prototype.renderCardToDom(Bicycle.prototype.filterPriceDown(store, Number(lowestNum.value), Number(highestNum.value), msgBox));
 });
 
 priceUp.addEventListener("click", (e) => {
     cleanProductList(productList)
-    Bicycle.prototype.renderCardToDom(Bicycle.prototype.filterPriceUp(store, Number(lowestNum.value), Number(highestNum.value)));
+    Bicycle.prototype.renderCardToDom(Bicycle.prototype.filterPriceUp(store, Number(lowestNum.value), Number(highestNum.value), msgBox));
 })
 
 form.addEventListener("submit", (e) => {
