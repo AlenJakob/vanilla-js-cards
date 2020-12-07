@@ -8,7 +8,7 @@ const newBicycle = new Bicycle({ name: "Kross", model: "Batavus", price: 1100, d
 const newBicycle2 = new Bicycle({ name: "Merida", model: "Mierda", price: 2300, desc: desc2, imgUrl: imgUrl2 });
 const newBicycle3 = new Bicycle({ name: "Romet", model: "m400", price: 3600, desc: desc1, imgUrl: imgUrl3 });
 
-const store = [newBicycle, newBicycle2, newBicycle3]
+const store = [newBicycle, newBicycle2, newBicycle3,newBicycle, newBicycle2, newBicycle3,newBicycle, newBicycle2, newBicycle3]
 
 const productList = document.querySelector("#list-products");
 //Dom_Elements
